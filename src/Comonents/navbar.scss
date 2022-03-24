@@ -1,0 +1,257 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --transition: all 400ms ease;
+}
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  color: white;
+  background-color: #1f2641;
+  overflow-x: hidden;
+}
+nav{
+  .container{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.btn{
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn:hover{
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-primary{
+  background: rgba(247, 88, 66, 0.4);
+  color: white;
+}
+
+
+/* =================== NAVBAR STYLE ================*/
+.navbar{
+  background: transparent;
+  width: 100vw;
+  height: 5rem;
+  position:fixed;
+  top: 0;
+  z-index: 11;
+}
+
+// Scroll navbar code
+.window__scroll{
+  background: #6c63ff;
+  box-shadow: 0 1rem  2rem rgba(0, 0, 0, 0.2);
+}
+
+.nav__container{
+  height: 100%;
+  .navbar-brand{
+    color: white;
+  }
+}
+
+.navbar-brand:hover{
+  color: #424890;
+}
+
+nav button {
+  display: none;
+}
+
+.navbar-nav{
+  gap: 4rem;
+}
+
+.navbar-nav a{
+  color: #fff;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.nav__menu .nav-link:hover {
+  color: #424890;
+}
+
+/* =================== YANGILIKLAR STYLE ================*/
+header{
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  margin-bottom: 5rem;
+
+  .header__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    .header__left p{
+      margin: 1rem 0 2.4rem;
+    }
+    .maktab69{
+      width: 100%;
+      height: 22rem;
+    }
+  }
+
+}
+
+/* =================== CATEGORIES STYLE ================*/
+.categories{
+  background: #2e3267;
+  height: 31rem;
+  .categories__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    //gap: 4rem;
+
+    .categories__left{
+      margin-right: 3rem;
+      h1{
+        line-height: 1;
+        margin-bottom: 3rem;
+      }
+      p{
+        margin: 1rem  0 3rem;
+      }
+    }
+
+    .categories__right{
+      display: grid;
+      margin: 4rem 0 0 0 ;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      .category{
+        background: #424890;
+        padding: 1rem;
+        margin: 0;
+        gap: 1rem;
+        border-radius: 2rem;
+        transition: var(--transition);
+        h5{
+          margin: 0.5rem 0 1rem;
+        }
+        p{
+          font-size: 0.85rem;
+        }
+      }
+      .category:hover{
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+/* =================== KURS STYLE ================*/
+.courses{
+  margin-top:5rem;
+  h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .courses__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    .course{
+      background: #2e3267;
+      text-align: center;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      .course__image{
+        img{
+          height: 220px;
+        }
+      }
+      .course__info{
+        padding: 2rem;
+        p{
+          margin: 1.2rem 0 2rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  .course:hover{
+    background: transparent;
+    border-color: #6c63ff;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: 90%;
+    h2{
+      font-size: 2.2rem;
+    }
+  }
+}
+
+
+/* =================== SAVOL STYLE ================*/
+
+.savollar{
+  background-color: #2e3267;
+  box-shadow: inset 0  0 3rem rgba(0, 0, 0, 0.5rem);
+  .savol__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    .ochish p {
+      display: block;
+    }
+    .savol{
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      height: fit-content;
+      background-color: #6c63ff;
+
+      .savol__icon{
+        align-self: flex-start;
+        font-size: 1.2rem ;
+      }
+      .savol__javob{
+        h4{
+          font-size: 1rem;
+          line-height: 2.2;
+        }
+        p{
+          margin-top: 0.8rem;
+          display: none;
+        }
+      }
+    }
+  }
+}
